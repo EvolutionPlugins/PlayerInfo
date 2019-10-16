@@ -1,2 +1,7 @@
 # Player_Info
-This project was made back in 2017, when I started programming
+
+# Command
+/pinfo - write to chat a SteamID64, IP, stats and etc..
+
+# Permission
+pinfo
