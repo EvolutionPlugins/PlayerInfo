@@ -42,7 +42,7 @@ namespace PlayerInfo
             #region Vars
 
             var nickname = otherplayer.DisplayName;
-            var steamNmae = otherplayer.SteamName;
+            var steamName = otherplayer.SteamName;
             var csteamId = otherplayer.CSteamID.m_SteamID;
             var steamGroup = otherplayer.SteamGroupID.m_SteamID;
             var ip = otherplayer.IP;
@@ -59,7 +59,7 @@ namespace PlayerInfo
 
             #endregion Vars
 
-            UnturnedChat.Say(player, plugin.Translate("Info_Player0", nickname, steamNmae, csteamId, steamGroup, ip, ping), Color.magenta);
+            UnturnedChat.Say(player, plugin.Translate("Info_Player0", nickname, steamName, csteamId, steamGroup, ip, ping), Color.magenta);
             UnturnedChat.Say(player, plugin.Translate("Info_Player1", health, hungry, water, poison), Color.magenta);
             UnturnedChat.Say(player, plugin.Translate("Info_Player2", energy, oxygen, experience, isBleeding, isBroken), Color.magenta);
         }
