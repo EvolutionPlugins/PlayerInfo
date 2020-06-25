@@ -8,7 +8,7 @@ using UnityEngine;
 
 namespace PlayerInfo
 {
-    public class PInfoCommand : IRocketCommand
+    public class PlayerInfoCommand : IRocketCommand
     {
         public AllowedCaller AllowedCaller => AllowedCaller.Player;
 
@@ -24,6 +24,7 @@ namespace PlayerInfo
 
         private PlayerInfo Instance => PlayerInfo.Instance;
 
+        // Привет мир =D
         public void Execute(IRocketPlayer caller, string[] command)
         {
             var player = (UnturnedPlayer)caller;
