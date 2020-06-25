@@ -1,4 +1,5 @@
 # PlayerInfo
+PlayerInfo is Unturned / RocketMod 4 plugin. Shows all information about a player
 
 # Command
 /pinfo **&lt;player&gt;** - Shows Player name, Steam name, SteamID, GroupId, IP, Ping, Health, Hunger, Water, Virus, Stamina, Oxygen, Experience, Is Bleeding, Is Broken Legs
