@@ -69,12 +69,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Commands\PInfoCommand.cs" />
+    <Compile Include="Commands\PlayerInfoCommand.cs" />
     <Compile Include="PlayerInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="libs\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
