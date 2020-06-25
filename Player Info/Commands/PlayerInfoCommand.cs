@@ -48,7 +48,9 @@ namespace PlayerInfo
             var steamName = otherPlayer.SteamName;
             var csteamId = otherPlayer.CSteamID.m_SteamID;
             var steamGroup = otherPlayer.SteamGroupID.m_SteamID;
-            var ip = SteamGameServerNetworking.GetP2PSessionState(otherPlayer.CSteamID, out var p2p) ? Parser.getIPFromUInt32(p2p.m_nRemoteIP) : "???";
+            var ip = SteamGameServerNetworking.GetP2PSessionState(otherPlayer.CSteamID, out var p2p)
+                ? Parser.getIPFromUInt32(p2p.m_nRemoteIP)
+                : "???";
             var ping = otherPlayer.Ping;
             var health = otherPlayer.Health;
             var hungry = otherPlayer.Hunger;
@@ -62,9 +64,14 @@ namespace PlayerInfo
 
             #endregion Vars
 
-            UnturnedChat.Say(player, Instance.Translate("Info_Player0", nickName, steamName, csteamId, steamGroup, ip, Mathf.Round(ping)), Color.magenta);
-            UnturnedChat.Say(player, Instance.Translate("Info_Player1", health, hungry, water, virus), Color.magenta);
-            UnturnedChat.Say(player, Instance.Translate("Info_Player2", stamina, oxygen, experience, isBleeding, isBroken), Color.magenta);
+            ChatManager.serverSendMessage(Instance.Translate("Info_Player0", nickName, steamName, csteamId, steamGroup, ip, Mathf.Round(ping)),
+                Color.magenta, null, player.SteamPlayer(), EChatMode.SAY, useRichTextFormatting: Instance.Config.UseRich);
+
+            ChatManager.serverSendMessage(Instance.Translate("Info_Player1", health, hungry, water, virus),
+                Color.magenta, null, player.SteamPlayer(), EChatMode.SAY, useRichTextFormatting: Instance.Config.UseRich);
+
+            ChatManager.serverSendMessage(Instance.Translate("Info_Player2", stamina, oxygen, experience, isBleeding, isBroken),
+                Color.magenta, null, player.SteamPlayer(), EChatMode.SAY, useRichTextFormatting: Instance.Config.UseRich);
         }
     }
 }
