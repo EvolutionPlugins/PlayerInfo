@@ -23,10 +23,10 @@ namespace PlayerInfo
 
         public override TranslationList DefaultTranslations => new TranslationList
         {
-            {"PlayerNotFound", "Игрок не найден" },
-            { "Info_Player0", "Имя в игре: {0}. Имя в Steam: {1}. SteamID64: {2}. SteamID64Group: {3}. IP: {4}. Пинг: {5}" },
-            { "Info_Player1", "Здоровье: {0}. Голод: {1}. Жажда: {2}. Радиация: {3}." },
-            { "Info_Player2", "Энергия: {0}. Кислород: {1}. Опыт: {2}. Кровотечение?: {3}. Кость сломана?: {4}" }
+            {"PlayerNotFound", "Player not found" },
+            { "Info_Player0", "Display name: {0}. Name in Steam: {1}. SteamID64: {2}. SteamID64Group: {3}. IP: {4}. Ping: {5}" },
+            { "Info_Player1", "Health: {0}. Hunger: {1}. Water: {2}. Virus: {3}." },
+            { "Info_Player2", "Stamina: {0}. Oxygen: {1}. Experience: {2}. Is Bleeding: {3}. Is Broken Legs: {4}" }
         };
     }
 }
