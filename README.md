@@ -7,7 +7,7 @@
 pinfo
 
 # TODO
-Adds more information to shows:
+Add more information to show:
 - [ ] IsGodMod
 - [ ] IsVanish
 - [ ] Position
